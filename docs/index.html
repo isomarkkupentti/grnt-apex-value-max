@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GRNT APEX — Sports perp</title>
+    <meta name="description" content="LMSR tape that never suspends. 30/35/35 JV. Software take." />
+    <meta name="theme-color" content="#0b1220" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b1220;
+        --surface: #121a2a;
+        --raised: #182338;
+        --fg: #e8edf5;
+        --muted: #8b9aab;
+        --subtle: #5c6b7c;
+        --border: #2a364a;
+        --accent: #c5d0dc;
+        --accent-fg: #0b1220;
+        --gain: #7dcea0;
+        --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+        --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font); }
+      a { color: inherit; }
+      .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
+      header.nav {
+        display: flex; justify-content: space-between; align-items: center;
+        height: 3rem; border-bottom: 1px solid var(--border);
+      }
+      .brand { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+      .hero {
+        position: relative; min-height: 78dvh; display: grid; align-items: end;
+        padding: 4rem 0; border-bottom: 1px solid var(--border);
+        background:
+          radial-gradient(80% 60% at 80% -10%, color-mix(in oklab, var(--accent) 14%, transparent), transparent),
+          linear-gradient(180deg, transparent, var(--bg) 88%);
+      }
+      h1 { font-size: clamp(2.75rem, 8vw, 4.5rem); line-height: 0.95; letter-spacing: -0.03em; margin: 1rem 0 0; font-weight: 600; }
+      h1 span { display: block; color: var(--muted); }
+      .lede { max-width: 36rem; color: var(--muted); font-size: 1.125rem; line-height: 1.55; }
+      .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 2rem; }
+      .stat { border: 1px solid var(--border); background: color-mix(in oklab, var(--surface) 80%, transparent); border-radius: 12px; padding: 1rem; }
+      .stat dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--subtle); }
+      .stat dd { margin: 0.5rem 0 0; font-family: var(--mono); font-size: 1.5rem; color: var(--gain); }
+      section { padding: 4rem 0; }
+      h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); letter-spacing: -0.02em; max-width: 22ch; }
+      .kicker { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.75rem; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 500; padding: 0.75rem; }
+      td { padding: 0.75rem; border-top: 1px solid var(--border); }
+      td.gain { color: var(--gain); }
+      .grid { display: grid; gap: 1rem; }
+      .card { border: 1px solid var(--border); background: var(--bg); border-radius: 20px; padding: 1.25rem; }
+      .card h3 { margin: 0; font-size: 1.125rem; font-weight: 500; }
+      .card p { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
+      .band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      footer { border-top: 1px solid var(--border); padding: 4rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: end; }
+      .btn {
+        display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem;
+        border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: 500;
+      }
+      .btn-p { background: var(--accent); color: var(--accent-fg); }
+      .btn-o { border: 1px solid var(--border); background: var(--raised); }
+      @media (min-width: 900px) {
+        .hero { grid-template-columns: 1.3fr 0.7fr; gap: 2rem; }
+        .stats { margin-top: 0; }
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav wrap">
+      <p class="brand">GRNT APEX</p>
+      <a class="brand" href="https://github.com/isomarkkupentti/grnt-apex-value-max">GitHub</a>
+    </header>
+    <section class="hero wrap">
+      <div>
+        <p class="kicker">GRNT Partners</p>
+        <h1>Sports perp.<span>Software take.</span></h1>
+        <p class="lede">LMSR tape that never suspends. 30% of JV cash. Not a book. Not Polymarket.</p>
+      </div>
+      <dl class="stats">
+        <div class="stat"><dt>GRNT EV</dt><dd>€1.97bn</dd></div>
+        <div class="stat"><dt>JV 100%</dt><dd>€6.55bn</dd></div>
+        <div class="stat"><dt>Split</dt><dd>30 / 35 / 35</dd></div>
+        <div class="stat"><dt>Y5 EV/NGR</dt><dd>2.81x</dd></div>
+      </dl>
+    </section>
+    <section class="wrap">
+      <p class="kicker">The market is broken</p>
+      <h2>House books suspend. Prediction markets do not live. Winners get banned.</h2>
+      <div style="overflow-x:auto;margin-top:2rem">
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>Stake-class</th><th>Polymarket</th><th>GRNT</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Leverage</td><td>1x</td><td>1x</td><td class="gain">2x–20x</td></tr>
+            <tr><td>Live tape</td><td>Suspended</td><td>Not live</td><td class="gain">Open. LMSR b moves.</td></tr>
+            <tr><td>Winners</td><td>Limit / ban</td><td>No limit</td><td class="gain">LP model. No ban.</td></tr>
+            <tr><td>Capital</td><td>House book</td><td>Order book</td><td class="gain">Yield pool</td></tr>
+            <tr><td>Price</td><td>Manual / slow</td><td>Spread</td><td class="gain">XGB + LMSR</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="band">
+      <section class="wrap grid grid-2">
+        <article class="card"><h3>Never suspend</h3><p>Knockdown moves b. Price jumps. Tape stays open. Vault HALT is a different door.</p></article>
+        <article class="card"><h3>2x–20x on a binary</h3><p>Margin × leverage. Liq = entry × (1 − 1/lev). Fees from flow, not from fading winners.</p></article>
+        <article class="card"><h3>No winner bans</h3><p>LPs earn trade, funding, and liquidation. 70/30 LP / GRNT. If fees miss LVR, you are a book again.</p></article>
+        <article class="card"><h3>Software take</h3><p>C-SOE and SBOBET pay CAC, rails, licences. GRNT takes 30% of FCF. Put it in the SHA.</p></article>
+      </section>
+    </div>
+    <section class="wrap">
+      <p class="kicker">Two clocks</p>
+      <h2>Do not staple year 5 to a SAFE</h2>
+      <div class="grid grid-4" style="margin-top:2rem">
+        <article class="card" style="background:var(--raised)"><h3>Now</h3><p>Pre-seed €250k at €2.5m post. Tipster + LMSR paper tape.</p></article>
+        <article class="card" style="background:var(--raised)"><h3>Seed</h3><p>€1.5m at €10m. B2B widget. Curacao / MGA supplier.</p></article>
+        <article class="card" style="background:var(--raised)"><h3>Vault</h3><p>€1m first-loss LP. Yield from fees. Not equity.</p></article>
+        <article class="card" style="background:var(--raised)"><h3>Year 5</h3><p>DCF €1.97bn at 18% WACC, g 3.5%. Do not staple to a SAFE.</p></article>
+      </div>
+    </section>
+    <footer class="wrap">
+      <div>
+        <h2>Open the model</h2>
+        <p class="lede">Desk, JV DCF, LMSR tape, and the bible are in the repo. Import it on Vercel as tanstack-start, build command npm run build.</p>
+      </div>
+      <a class="btn btn-p" href="https://github.com/isomarkkupentti/grnt-apex-value-max">Source</a>
+    </footer>
+  </body>
+</html>
