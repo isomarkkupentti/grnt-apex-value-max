@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b1220;
+  --color-surface: #121a2a;
+  --color-raised: #182338;
+  --color-fg: #e8edf5;
+  --color-muted: #8b9aab;
+  --color-subtle: #5c6b7c;
+  --color-border: #2a364a;
+  --color-accent: #c5d0dc;
+  --color-accent-fg: #0b1220;
+  --color-gain: #7dcea0;
+  --color-loss: #e07a7a;
+  --color-warn: #d4b483;
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.mermaid-host {
+  max-width: 100%;
+}
+.mermaid-host svg {
+  max-width: 100%;
+  height: auto;
+}
+.mermaid-host .nodeLabel,
+.mermaid-host .edgeLabel,
+.mermaid-host text {
+  font-family: var(--font-sans);
+}
+
+input[type="range"] {
+  accent-color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
